@@ -12,9 +12,24 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["downloads", "storage", "tabs"],
+  "permissions": ["downloads", "storage", "tabs", "activeTab", "scripting"],
   "action": {
     "default_popup": "index.html"
   },
-  "options_page": "pages/options/index.html"
+  "options_page": "pages/options/index.html",
+  "commands": {
+    "run-foo": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      },
+      "description": "Run \"foo\" on the current page."
+    },
+    "_execute_action": {
+      "suggested_key": {
+        "windows": "Ctrl+U",
+        "mac": "Command+U"
+      }
+    }
+  }
 }
